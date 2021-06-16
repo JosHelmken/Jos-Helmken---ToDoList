@@ -1,0 +1,138 @@
+$bgcolor: #141414;
+$bgcolor2: #242424;
+$textcolor: #8a8a8a;
+$highlightcolor: #ffffff;
+$accentcolor: #ff5252;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background: $bgcolor;
+  color: $textcolor;
+  font-size: 20px;
+  line-height: 140%;
+}
+
+.container {
+  max-width: 60vw;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 90px 0px;
+  width: 100%;
+
+  & nav {
+    width: 85%;
+    padding: 80px 60px 40px;
+
+    & input[type="text"] {
+      padding: 15px 20px;
+      outline: none;
+      width: 65%;
+      margin-right: 40px;
+      border: 1px solid $bgcolor2;
+      font-size: 18px;
+      background: #242424;
+      border-radius: 2px;
+      color: $textcolor;
+      &.error-no-entry {
+        border: 1px solid $accentcolor;
+      }
+    }
+
+    & input[type="submit"] {
+      padding: 14px 25px;
+      border: none;
+      background: $accentcolor;
+      color: $highlightcolor;
+      font-size: 18px;
+      border-radius: 2px;
+      cursor: pointer;
+    }
+  }
+}
+
+#task-list li {
+  list-style: none;
+  position: relative;
+  padding: 20px 40px 20px 20px;
+  background: $bgcolor2;
+  margin-bottom: 1px;
+  border-radius: 2px;
+  & input[type="checkbox"] {
+    float: left;
+    height: 25px;
+    width: 25px;
+    margin-right: 20px;
+    margin-top: 3px;
+  }
+}
+
+#task-list li.checked {
+  text-decoration: line-through;
+}
+
+.editbtn {
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  top: 25px;
+  right: 60px;
+  bottom: auto;
+  left: auto;
+  opacity: 20%;
+}
+.deletebtn {
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  top: 25px;
+  right: 20px;
+  bottom: auto;
+  left: auto;
+  opacity: 20%;
+}
+.hidden {
+  opacity: 0;
+  display: none;
+}
+
+.editbox {
+  background: $bgcolor2;
+  color: $highlightcolor;
+  padding: 10px 20px;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  width: 60%;
+  margin-left: 30px;
+  margin-top: -8px;
+  margin-bottom: -8px;
+}
+.edit-btns {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  bottom: auto;
+  left: auto;
+}
+.save, .cancel {
+  display: inline;
+  height: 50px;
+  width: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+  cursor: pointer;
+  &:hover {
+    color: $highlightcolor;
+
+  }
+  
+}
+
+.editbtn:hover, .deletebtn:hover {
+  opacity: 80%;
+}
